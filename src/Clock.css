@@ -1,0 +1,27 @@
+div {
+    font-family: 'Digital-7';
+    height: 100%; 
+    display: grid; 
+    justify-content: center; 
+   
+} 
+
+#clock {
+    color: #ffffff;
+    font-size: 8vw; 
+    letter-spacing: 14px;
+    text-shadow: 
+        -2px -2px 4px #d8d7d7,
+         2px -2px 4px #d8d7d7,
+         -2px 2px 4px #d8d7d7,
+          2px 2px 4px #d8d7d7;       
+    align-items: flex-end; 
+}
+
+#day {
+    color: #ffffff;
+    font-size: 5vw;
+    font-family: 'Jura';
+}
+
+

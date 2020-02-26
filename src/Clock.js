@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-
+import './Clock.css';
 class Clock extends Component {
     constructor(props) {
         super(props);
         this.state = {date: new Date()};
     }
-
+    getDay() {
+        const days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+        return days[this.state.date.getDay()];
+    }
     componentDidMount() {
         this.timerID = setInterval(
             () => this.tick(),
@@ -26,7 +29,8 @@ class Clock extends Component {
     render() {
         return (
             <div>
-               <h1>{ this.state.date.toLocaleTimeString() }</h1>
+                <div id='clock'>{ this.state.date.toLocaleTimeString() }<br /></div>
+                <div id='day'>{ this.getDay()}, { this.state.date.toLocaleString('ru', {day: '2-digit', month: 'long' }) }</div>
             </div>
         )
     }
