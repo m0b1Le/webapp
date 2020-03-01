@@ -1,0 +1,48 @@
+.temperature {
+    font-family: 'Jura';
+    display: grid;
+    width: 100%;
+    grid-template-rows: 30px 50px;
+    grid-template-columns: 50% 50%;
+    gap: 0 10px;
+    color: #ffffff;
+} 
+
+.temperature section {
+    display: flex;
+}
+
+#temp-description {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-self: end;
+    padding-bottom: 5px;
+}
+
+.temperature input {
+    font-family: 'Jura';
+    background-color: rgba(0, 0, 0, 0);
+    caret-color: #ffffff;
+    height: 50px;
+    width: 30vw;
+    border: 1px solid #ffffff;
+    border-radius: 15px 0 0 15px;
+    outline: none;
+    font-size: 20px;
+    padding: 5px;
+    color: #ffffff;
+    text-align: right;
+  }
+
+  #temp-unit {
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    padding: 0 5px;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-radius: 0 15px 15px 0;
+
+}

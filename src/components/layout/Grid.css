@@ -1,0 +1,35 @@
+.container {
+    font-family: 'Jura';
+    height: 100%; 
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%; 
+    grid-template-rows: 25%;
+    grid-template-areas: 
+    "description description description description"
+    "box box box box";
+    grid-gap: 10px;    
+    text-align: center; 
+} 
+
+.description {
+    grid-area: description;
+    color: #ffffff
+}
+
+.container .box {
+    display: flex;
+    text-decoration: none;
+    color: #000000;
+    background-color: #dfdada;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-transition: 1s ease;
+}
+
+.container .box:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
