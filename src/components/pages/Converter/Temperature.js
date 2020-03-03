@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TemperatureInput from './TemperatureInput';
 import './Temperature.css';
+import { Link } from 'react-router-dom';
 
 export class Temperature extends Component {
     constructor(props) {
@@ -45,6 +46,7 @@ export class Temperature extends Component {
         return (
             <React.Fragment>
                 <div className="temperature">
+                    <Link to="/" className="back">Назад</Link>
                     <p id="temp-description">Введите температуру в Цельсиях</p>
                     <p id="temp-description">Введите температуру в Кельвинах</p>
                     <section>
