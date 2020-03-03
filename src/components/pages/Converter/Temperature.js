@@ -46,7 +46,7 @@ export class Temperature extends Component {
         return (
             <React.Fragment>
                 <div className="temperature">
-                    <Link to="/" className="back">Назад</Link>
+                    <h1 id="temp_conv">Конвертер температуры</h1>
                     <p id="temp-description">Введите температуру в Цельсиях</p>
                     <p id="temp-description">Введите температуру в Кельвинах</p>
                     <section>
@@ -57,6 +57,7 @@ export class Temperature extends Component {
                         <TemperatureInput scale="f" temperature={fahrenheit} onTemperatureChange={this.handleFarenheitChange} />
                         <p id="temp-unit">&deg;F</p>
                     </section>
+                    <Link to="/" className="back">Назад</Link>
                 </div>
             </React.Fragment>
         )

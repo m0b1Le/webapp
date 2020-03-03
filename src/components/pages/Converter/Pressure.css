@@ -1,4 +1,4 @@
-.temperature {
+.pressure {
     font-family: 'Jura';
     display: grid;
     width: 100%;
@@ -8,11 +8,11 @@
     color: #ffffff;
 } 
 
-.temperature section {
+.pressure section {
     display: flex;
 }
 
-#temp_conv {
+#press_conv {
     grid-column: 1 / 3;
     text-align: center;
 }
@@ -33,7 +33,7 @@
     margin-top: 30px;
 }
 
-#temp-description {
+#press-description {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -41,7 +41,7 @@
     padding-bottom: 5px;
 }
 
-.temperature input {
+.pressure input {
     font-family: 'Jura';
     background-color: rgba(0, 0, 0, 0);
     caret-color: #ffffff;
@@ -55,6 +55,18 @@
     color: #ffffff;
     text-align: right;
   }
+
+  /* #select {
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    padding: 0 5px;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-radius: 0 15px 15px 0;
+    
+  } */
 
   #temp-unit {
     height: 50px;
