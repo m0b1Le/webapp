@@ -3,7 +3,7 @@
     display: grid;
     width: 100%;
     grid-template-rows: 30px 50px 80px;
-    grid-template-columns: 50% 50%;
+    /* grid-template-columns: 50% 50%; */
     gap: 0 10px;
     color: #ffffff;
 } 
@@ -79,3 +79,4 @@
     border-radius: 0 15px 15px 0;
 
 }
+

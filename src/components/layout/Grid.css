@@ -7,7 +7,7 @@
     grid-template-areas: 
     "description description description description"
     "box box box box";
-    grid-gap: 10px;    
+    grid-gap: 10px 20px;    
     text-align: center; 
 } 
 
@@ -26,6 +26,7 @@
     align-items: center;
     border-radius: 10px;
     -webkit-transition: 1s ease;
+    width: 200px;
 }
 
 .container .box:hover {

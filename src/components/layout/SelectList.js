@@ -3,34 +3,40 @@ import Select from 'react-select';
 
 export class SelectList extends Component {
     
+    state = {
+      selectedOption: null,
+    }
+
+    handleChange = selectedOption => {
+      this.setState({ selectedOption });
+    }
+
     render() {
         const options = [
-            {value: '0', label: 'Padasdadsa'},
+            {value: '0', label: 'Padasdadsa', checked: 'true'},
             {value: '1', label: 'кПа'}
         ]
-
         const customStyles = {
-            option: (provided, state) => ({
-              ...provided,
-              borderBottom: '1px dotted pink',
-              color: state.isSelected ? 'red' : 'blue',
-              padding: 20,
-            }),
-            control: () => ({
-              // none of react-select's styles are passed to <Control />
-              width: 200,
-            }),
-            singleValue: (provided, state) => {
-              const opacity = state.isDisabled ? 0.5 : 1;
-              const transition = 'opacity 300ms';
-          
-              return { ...provided, opacity, transition };
-            }
+          control: (provided, state) => ({
+            ...provided,
+            height: "50px",
+            backgroundColor: 'none',
+            borderColor: 'white',
+            borderLeft: 'none',
+            borderRadius: '0 15px 15px 0'
+        }),
+          placeholder: () => ({
+           backgroundColor: 'none',
+           paddingTop: '10px'
+          }),
+          menu: (provided, state) => ({
+            ...provided,
+          })
           }
-          
+          const {selectedOption} = this.state;
         return (
             <div>
-                <Select id="select" styles={customStyles} options={options} />
+                <Select styles={customStyles} onChange={this.handleChange} options={options} value={selectedOption} />
             </div>
         )
     }

@@ -3,6 +3,7 @@ import PressureInput from './PressureInput';
 import './Pressure.css';
 import { Link } from 'react-router-dom';
 import SelectList from '../../layout/SelectList';
+import SelectList2 from '../../layout/SelectList2';
 
 export class Pressure extends Component {
     constructor(props) {
@@ -56,7 +57,7 @@ export class Pressure extends Component {
                     <p id="press-description">Введите давление в</p>
                     <section>
                         <PressureInput scale="a" pressure={first} onPressureChange={this.handleFirstChange} />                        
-                        
+                        <SelectList />
                     </section>
                     <section>
                         <PressureInput scale="b" pressure={second} onPressureChange={this.handleSecondChange} />
@@ -64,7 +65,7 @@ export class Pressure extends Component {
                     </section>
                     
                     <Link to="/" className="back">Назад</Link>
-                    <SelectList />
+                    
                 </div>
             </React.Fragment>
         )

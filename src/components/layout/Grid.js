@@ -11,7 +11,7 @@ export class Grid extends Component {
                <Link to="/pressure" className="box">Давление</Link>
                <Link to="/temperature" className="box">Температура</Link>
                <Link className="box">Объёмный расход</Link>
-               <Link className="box">Масса</Link>
+               <Link to="/weight" className="box">Масса</Link>
             </div>
             </React.Fragment>
         )

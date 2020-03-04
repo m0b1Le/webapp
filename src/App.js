@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import Grid from './components/layout/Grid';
 import Pressure from './components/pages/Converter/Pressure';
-import Temperature from './components/pages/Converter/Temperature'
+import Temperature from './components/pages/Converter/Temperature';
+import Weight from './components/pages/Converter/Weight'
 
 
 class App extends React.Component {
@@ -20,6 +21,7 @@ class App extends React.Component {
              )} />              
              <Route path="/pressure" component={Pressure} />
              <Route path="/temperature" component={Temperature} />              
+             <Route path="/weight" component={Weight} />              
           </div>
         </Router>
       )
