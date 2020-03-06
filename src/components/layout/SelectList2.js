@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Select from 'react-select'
-import './SelectList2.css'
+// import './SelectList2.css'
 
 export class SelectList2 extends Component {
     
