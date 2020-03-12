@@ -1,72 +1,26 @@
 import React, { Component } from 'react'
-import Select from 'react-select';
 import './SelectList.css'
 
 export class SelectList extends Component {
-    
-    state = {
-      selectedOption: null,
+    constructor(props) {
+      super(props);
+      this.state = {value: '1'};
+      this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange = selectedOption => {
-      this.setState({ selectedOption });
+    handleChange(e) {
+      this.setState({value: e.target.value});
     }
 
     render() {
-        const options = [
-            {value: '0', label: 'Па'},
-            {value: '1', label: 'кПа'}
-        ]
-        const customStyles = {
-          control: (provided) => ({
-            ...provided,
-            fontFamily: 'Jura',
-            height: "50px",
-            backgroundColor: 'none',
-            borderColor: 'white',
-            borderLeft: 'none',
-            borderRadius: '0 15px 15px 0',
-            width: 300,
-            padding: 10
-        }),
-          placeholder: (provided) => ({
-            ...provided,
-           backgroundColor: 'none',
-           paddingTop: '10px',
-           
-          }),
-          option: (provided, state) => ({
-            ...provided,
-            fontFamily: 'Jura',
-            color: state.isSelected ? 'white' : 'black'
-          }),
-          singleValue: (provided) => ({
-            ...provided,
-            color: 'white',
-            fontFamily: 'Jura',
-            alignSelf: 'center',
-            
-          }),
-          menu: (provided) => ({
-            ...provided,
-            color: 'white',
-            backgroundColor: 'none'
-          }),
-          dropdownIndicator: (provided) => ({
-            ...provided,
-            color: 'white',
-            borderLeft: 'none',
-            width: 40
-          }),
-          container: (provided) => ({
-            ...provided,
-            zIndex: 200
-          })
-          }
-          const {selectedOption} = this.state;
+        
         return (
-            <div>
-                <Select styles={customStyles} onChange={this.handleChange} options={options} defaultValue={options[0]} menuIsOpen={true} />
+            <div className="pressureSelect">
+                <select value={this.state.value} onChange={this.handleChange}>
+                  <option value="0">Па</option>
+                  <option value="1">кПа</option>
+                  <option value="2">МПа</option>
+                </select>
             </div>
         )
     }

@@ -3,25 +3,24 @@ import PressureInput from './PressureInput';
 import './Pressure.css';
 import { Link } from 'react-router-dom';
 import SelectList from '../../layout/SelectList';
-import SelectList2 from '../../layout/SelectList2';
 
 export class Pressure extends Component {
     constructor(props) {
         super(props);
         this.handleFirstChange = this.handleFirstChange.bind(this);
         this.handleSecondChange = this.handleSecondChange.bind(this);
-        this.state = {pressure: '', scale: 'a'};
+        this.state = {pressure: '', scale: 'a', state1: '1', state2: '2'};
         
     }
     
     
 
     toFirst(second) {
-        return ;
+        return this.state2;
       }
       
     toSecond(first) {
-        return ;
+        return this.state1;
       }
 
     tryConvert(pressure, convert) {
@@ -43,9 +42,15 @@ export class Pressure extends Component {
     }
 
     render() {
-        
+        const pressureConv = [
+            [1, Math.pow(10, -3), Math.pow(10, -6)],
+            [Math.pow(10, 3), 1, Math.pow(10, -3)],
+            [Math.pow(10, 6), Math.pow(10, 3), 1]
+        ]
         const scale = this.state.scale;
         const pressure = this.state.pressure;
+        const state1 = this.state.state1;
+        const state2 = this.state.state2;
         const first = scale === 'b' ? this.tryConvert(pressure, this.toFirst) : pressure;
         const second = scale === 'a' ? this.tryConvert(pressure, this.toSecond) : pressure;
 
@@ -57,15 +62,13 @@ export class Pressure extends Component {
                     <p id="press-description">Введите давление в</p>
                     <section>
                         <PressureInput scale="a" pressure={first} onPressureChange={this.handleFirstChange} />                        
-                        <SelectList />
+                        <SelectList state1={this.state.value}/>
                     </section>
                     <section>
                         <PressureInput scale="b" pressure={second} onPressureChange={this.handleSecondChange} />
-                        <p id="temp-unit">&deg;С</p>
+                        <SelectList state2={this.state.value}/>
                     </section>
-                    
                     <Link to="/" className="back">Назад</Link>
-                    
                 </div>
             </React.Fragment>
         )

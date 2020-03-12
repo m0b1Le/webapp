@@ -1,3 +1,22 @@
-.Select-control {
-    background-color: 'black'
+.pressureSelect select{
+    -webkit-appearance: none;
+    height: 50px;
+    width: 70px;
+    padding: 10px;
+    background: url("../../img/arrow.png") no-repeat right;
+    background-size: 20px;
+    color: #ffffff;
+    font-family: 'Jura';
+    font-size: 16px;
+    
+    border: 1px solid #ffffff;
+    border-left: none;
+    border-radius: 0 15px 15px 0;
+    
+    /* list-style-type: none;     */
+}
+
+.pressureSelect option {
+    color: #000000;
+    border: none;
 }
